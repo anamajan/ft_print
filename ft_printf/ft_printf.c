@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:56:57 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/04 13:55:29 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/04 22:30:32 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,22 +61,4 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	return (count);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	int	i = 42;
-	void	*ptr = &i;
-
-	int	me_count;
-	int	original_count;
-
-	me_count  = ft_printf("42 address: %p\n", ptr);
-	ft_printf("me_legth = %d\n", me_count);
-	original_count  = printf("42 address: %p\n", ptr);
-	printf("original_length = %d\n", original_count);
-	printf("%s\n", me_count == original_count ? "OK":"Fucked");
-
 }
