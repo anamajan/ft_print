@@ -29,6 +29,10 @@ int	ft_check(va_list args, char c)
 		count = ft_hexa_lower(va_arg(args, unsigned int));
 	else if (c == 'X')
 		count = ft_hexa_upper(va_arg(args, unsigned int));
+	else if (c == 'p')
+		count = ft_address(va_arg(args, unsigned long));
+	else if (c == '%')
+		return (ft_putchar('%'));
 	return (count);
 }
 
@@ -63,12 +67,15 @@ int	ft_printf(const char *str, ...)
 
 int	main()
 {
+	int	i = 42;
+	void	*ptr = &i;
+
 	int	me_count;
 	int	original_count;
 
-	me_count  = ft_printf("%s: %s\n","this is my first name", "Anass");
+	me_count  = ft_printf("42 address: %p\n", ptr);
 	ft_printf("me_legth = %d\n", me_count);
-	original_count  = printf("%s: %s\n", "this is my first name", "Anass");
+	original_count  = printf("42 address: %p\n", ptr);
 	printf("original_length = %d\n", original_count);
 	printf("%s\n", me_count == original_count ? "OK":"Fucked");
 

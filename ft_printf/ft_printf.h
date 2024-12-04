@@ -20,11 +20,12 @@
 # define BASE10 "0123456789"
 
 int	ft_printf(const char *str, ...);
-int	ft_putnbr_base(unsigned int nbr, char *str, unsigned int base);
+int	ft_putnbr_base(unsigned long nbr, char *str, int base);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
 int	ft_putnbr_unsigned(unsigned int nbr);
 int	ft_hexa_lower(unsigned int nbr);
 int	ft_hexa_upper(unsigned int nbr);
+int	ft_address(unsigned long nbr);
 #endif

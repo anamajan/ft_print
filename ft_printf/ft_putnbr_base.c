@@ -12,13 +12,13 @@
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(unsigned int nbr, char *str, unsigned int base)
+int	ft_putnbr_base(unsigned long nbr, char *str, int base)
 {
 	int	count;
 
 	count = 0;
-	if (nbr > base)
-		count += ft_putnbr_base(nbr / base, str, base);
+	if (nbr >= (unsigned long)base)
+		count += ft_putnbr_base((nbr / (unsigned long)base), str, base);
 	count += ft_putchar(str[(nbr % base)]);
 	return (count);
 }
