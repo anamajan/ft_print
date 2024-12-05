@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:30:54 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/04 12:08:08 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:07:06 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putnbr(int n)
 	count = 0;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		count += ft_putchar('-');
 		nbr = -n;
 	}
 	else
