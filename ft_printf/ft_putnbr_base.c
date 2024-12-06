@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:34:20 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/04 12:30:44 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/05 23:15:04 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putnbr_base(unsigned long nbr, char *str, int base)
 
 	count = 0;
 	if (nbr >= (unsigned long)base)
-		count += ft_putnbr_base((nbr / (unsigned long)base), str, base);
+		count = ft_putnbr_base((nbr / (unsigned long)base), str, base);
 	count += ft_putchar(str[(nbr % base)]);
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:46:01 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/04 12:30:04 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/06 11:35:24 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define BASE10 "0123456789"
 
 int	ft_printf(const char *str, ...);
+int	ft_check(va_list args, char c);
 int	ft_putnbr_base(unsigned long nbr, char *str, int base);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);

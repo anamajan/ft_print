@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:30:54 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/05 16:07:06 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/06 11:58:38 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putnbr(int n)
 {
-	unsigned int nbr;
-	int	count;
+	unsigned int	nbr;
+	int				count;
 
 	count = 0;
 	if (n < 0)
