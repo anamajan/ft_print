@@ -1,55 +1,70 @@
 # ft_printf
 
-An implementation of the printf function in C, following the specifications and behavior of the standard printf. This project is part of the 42 Network curriculum, designed to deepen understanding of variadic functions, memory handling, and formatted output.
-
-## Table of Contents
-- Overview
-- Features
-- Functionality
-- Functions Breakdown
-- Installation and Compilation
-- Usage
-- Testing
-- Acknowledgements
-
-## Overview
-
-`ft_printf` replicates the behavior of the C standard library function `printf`, providing formatted output for various data types and custom handling of memory and variadic arguments.
+`ft_printf` is a custom implementation of the C standard `printf` function, created as part of the 42 Network curriculum.
 
 ## Features
-
 - Supports the following format specifiers:
-  - `%c` for characters
-  - `%s` for strings
-  - `%p` for pointers (memory addresses)
-  - `%d` and `%i` for signed integers
-  - `%u` for unsigned integers
-  - `%x` and `%X` for hexadecimal numbers (lowercase and uppercase)
-  - `%%` for a literal percent sign
-- Handles variadic arguments using the `stdarg.h` library.
-- Implements memory-safe handling of `NULL` pointers for `%s` and `%p`.
+  - `%c`: Character
+  - `%s`: String
+  - `%p`: Pointer address
+  - `%d`/`%i`: Signed integers
+  - `%u`: Unsigned integers
+  - `%x`/`%X`: Hexadecimal (lowercase/uppercase)
+  - `%%`: Percent symbol
 
-## Functionality
+## Functions
 
-`ft_printf` provides formatted output for various data types based on format specifiers passed within the format string. For example:
-ft_printf("Hello, %s! You are %d years old.\n", "Alice", 25);
+### ft_printf.c
+The main function of the project, responsible for parsing the input format string, processing the arguments, and printing the formatted output.
 
-**Output:** `Hello, Alice! You are 25 years old.`
+### ft_putchar.c
+Outputs a single character to the standard output.
 
-The function parses the format string and dynamically handles the provided arguments to construct the output.
+### ft_putstr.c
+Outputs a string to the standard output. Handles `NULL` strings by printing `(null)`.
 
-## Functions Breakdown
+### ft_putnbr.c
+Prints a signed integer (`int`) to the standard output.
 
-### `ft_printf`
-- **Purpose:**  
-  The main function that replicates the standard `printf` functionality.
-- **Prototype:**  
-  ```c
-  int ft_printf(const char *str, ...);
-Parameters:
-  * str: A constant character pointer representing the format string.
-  * Variadic arguments: Additional arguments corresponding to format specifiers in str.
+### ft_putnbr_unsigned.c
+Prints an unsigned integer (`unsigned int`) to the standard output.
+
+### ft_putnbr_base.c
+Handles integer conversion to different bases (e.g., hexadecimal). Supports both uppercase and lowercase formats.
+
+### ft_address.c
+Prints a pointer address in hexadecimal format (prefixed with `0x`).
+
+### ft_check.c
+Contains helper functions to check format specifiers and handle input validation.
+
+### ft_hexa_lower.c
+Handles conversion and printing of hexadecimal values in lowercase.
+
+### ft_hexa_upper.c
+Handles conversion and printing of hexadecimal values in uppercase.
+
+## How to Use
+Include the `ft_printf.h` header and link `libftprintf.a` with your project. Use `ft_printf` just like the standard `printf`.
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ft_printf.git
+2. Compile the library:
+   ```bash
+   make
+## Usage
+1. Include the `ft_printf.h` header in your project.
+2. Compile your code with `libftprintf.a`: MAKE SURE TO DO THE FLAGS !!
+   ```bash
+   gcc -Wall -Wextra -Werror main.c libftprintf.a -o program
+3. Use ft_printf just like printf.
+
 ## How to run tests:
-### 1- Make the objects files (Make all)
-### 2- run in your terminal :  ```./tests/runtests.sh```
-### The tests are made by our peer Ali: https://github.com/ila36IX
+1. Make the objects files (Make all)
+2. Run the test script:
+   ```bash
+   ./tests/runtests.sh
+## Acknowledgements
+Special thanks to [Ali](https://github.com/ila36IX) for the testing tools.
