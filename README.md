@@ -46,8 +46,9 @@ The function parses the format string and dynamically handles the provided argum
 - **Prototype:**  
   ```c
   int ft_printf(const char *str, ...);
-
-
+Parameters:
+  * str: A constant character pointer representing the format string.
+  * Variadic arguments: Additional arguments corresponding to format specifiers in str.
 ## How to run tests:
 ### 1- Make the objects files (Make all)
 ### 2- run in your terminal :  ```./tests/runtests.sh```
