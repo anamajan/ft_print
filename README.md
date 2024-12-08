@@ -49,6 +49,15 @@ The basic workflow of `ft_printf`:
 ### `ft_printf`
 ```c
 int ft_printf(const char *str, ...);
+```
+
+Purpose: Main function that mimics printf.
+Parameters:
+
+    ```str``` - The format string containing text and format specifiers.
+    Variadic arguments corresponding to format specifiers.
+
+Return Value: Total number of characters printed.
 
 ## How to run tests:
 ### 1- Make the objects files (Make all)
