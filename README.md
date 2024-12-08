@@ -32,9 +32,7 @@ An implementation of the printf function in C, following the specifications and 
 ## Functionality
 
 `ft_printf` provides formatted output for various data types based on format specifiers passed within the format string. For example:
-
 ft_printf("Hello, %s! You are %d years old.\n", "Alice", 25);
-
 
 **Output:** `Hello, Alice! You are 25 years old.`
 
@@ -48,8 +46,6 @@ The function parses the format string and dynamically handles the provided argum
 - **Prototype:**  
   ```c
   int ft_printf(const char *str, ...);
-
-
 
 
 ## How to run tests:
