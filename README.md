@@ -1,63 +1,56 @@
 # ft_printf
 
-An implementation of the `printf` function in C, following the specifications and behavior of the standard `printf`. This project is part of the **42 Network curriculum**, designed to deepen understanding of variadic functions, memory handling, and formatted output.
+An implementation of the printf function in C, following the specifications and behavior of the standard printf. This project is part of the 42 Network curriculum, designed to deepen understanding of variadic functions, memory handling, and formatted output.
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Functionality](#functionality)
-- [Functions Breakdown](#functions-breakdown)
-- [Installation and Compilation](#installation-and-compilation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Acknowledgements](#acknowledgements)
-
----
+- Overview
+- Features
+- Functionality
+- Functions Breakdown
+- Installation and Compilation
+- Usage
+- Testing
+- Acknowledgements
 
 ## Overview
-`ft_printf` replicates the behavior of the C standard library function `printf`, supporting various format specifiers and features while adhering to 42 project constraints, such as limited library usage and no dynamic memory allocation.
 
----
+`ft_printf` replicates the behavior of the C standard library function `printf`, providing formatted output for various data types and custom handling of memory and variadic arguments.
 
 ## Features
-- Handles the following format specifiers:
-  - `%c` - Single character
-  - `%s` - String
-  - `%d` and `%i` - Signed decimal integers
-  - `%u` - Unsigned decimal integers
-  - `%x` and `%X` - Hexadecimal numbers (lowercase and uppercase)
-  - `%p` - Memory address (pointer)
-  - `%%` - Literal `%` character
-- Supports variadic arguments using `stdarg.h`.
-- Graceful handling of `NULL` for strings and pointers.
 
----
+- Supports the following format specifiers:
+  - `%c` for characters
+  - `%s` for strings
+  - `%p` for pointers (memory addresses)
+  - `%d` and `%i` for signed integers
+  - `%u` for unsigned integers
+  - `%x` and `%X` for hexadecimal numbers (lowercase and uppercase)
+  - `%%` for a literal percent sign
+- Handles variadic arguments using the `stdarg.h` library.
+- Implements memory-safe handling of `NULL` pointers for `%s` and `%p`.
 
 ## Functionality
-The project consists of the main `ft_printf` function, supported by helper functions to handle different format specifiers.
 
-The basic workflow of `ft_printf`:
-1. Parse the format string.
-2. Identify format specifiers.
-3. Retrieve variadic arguments.
-4. Use appropriate helper functions to format and print each argument.
-5. Return the total number of characters printed.
+`ft_printf` provides formatted output for various data types based on format specifiers passed within the format string. For example:
 
----
+ft_printf("Hello, %s! You are %d years old.\n", "Alice", 25);
+
+
+**Output:** `Hello, Alice! You are 25 years old.`
+
+The function parses the format string and dynamically handles the provided arguments to construct the output.
 
 ## Functions Breakdown
+
 ### `ft_printf`
-```c
-int ft_printf(const char *str, ...);
-```
+- **Purpose:**  
+  The main function that replicates the standard `printf` functionality.
+- **Prototype:**  
+  ```c
+  int ft_printf(const char *str, ...);
 
-Purpose: Main function that mimics printf.
-Parameters:
 
-    ```str``` - The format string containing text and format specifiers.
-    Variadic arguments corresponding to format specifiers.
 
-Return Value: Total number of characters printed.
 
 ## How to run tests:
 ### 1- Make the objects files (Make all)
