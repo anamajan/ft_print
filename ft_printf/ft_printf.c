@@ -6,7 +6,7 @@
 /*   By: anaamaja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:56:57 by anaamaja          #+#    #+#             */
-/*   Updated: 2024/12/06 11:55:41 by anaamaja         ###   ########.fr       */
+/*   Updated: 2024/12/06 20:25:36 by anaamaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,4 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (count);
 }
+
